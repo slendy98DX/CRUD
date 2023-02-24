@@ -41,7 +41,7 @@ public class CarController {
     }
 
     @PatchMapping("/{id}")
-    public Car editSingleUser(@PathVariable String id,@RequestBody Map<Object,Object> fields){
+    public Car editSingleCar(@PathVariable String id,@RequestBody Map<Object,Object> fields){
         Optional<Car> car1 = carRepository.findById(id);
         if(car1.isPresent()){
             fields.forEach((key, value) -> {
